@@ -22,6 +22,7 @@ const About = () => (
   <AboutContainer>
     <Title>About Me</Title>
     <Content>
+      Hi this is Antar Basu <br/>
       Welcome to my meal website! This project showcases a variety of delicious meals fetched from a public API. You can browse through different meal categories, generate a random meal, and save your favourites. Feel free to explore and enjoy the tasty journey!
     </Content>
   </AboutContainer>

@@ -1,53 +1,54 @@
+import React from 'react';
 import styled from 'styled-components';
 import RemoveButton from './RemoveButton';
 
 const FavouriteList = styled.ul`
   list-style-type: none;
   padding: 0;
-  max-height: calc(100vh - 100px); /* Adjust as needed */
-  
 `;
 
 const FavouriteItem = styled.li`
+  display: flex;
+  align-items: center;
   margin: 10px;
-  padding: 10px;
+  padding: 20px; /* Increased padding for larger cards */
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px; /* Increased border radius for rounded corners */
   background-color: #f8f9fa;
-  width: 200px;
-  text-align: center;
-  position: relative;
+  width: 80%; /* Adjust width as needed */
 `;
 
 const MealImage = styled.img`
-  width: 100%;
-  border-radius: 5px;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Maintain aspect ratio or adjust as needed */
+  border-radius: 10px;
+`;
+
+const MealDetails = styled.div`
+  flex: 1;
+  margin-left: 20px; /* Adjust spacing between image and details */
 `;
 
 const MealName = styled.p`
-  margin: 10px 0;
+  margin: 0;
+  font-weight: bold;
 `;
 
 const RemoveButtonContainer = styled.div`
-  margin-top: 10px;
-`;
-
-const CenteredContainer = styled.div`
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  min-height: 100vh; /* Ensure container takes full viewport height */
+  margin-left: auto; /* Pushes the delete button to the right */
 `;
 
 const Favourites = ({ favourites, removeFromFavourites }) => (
-  <CenteredContainer>
-    <div style={{marginLeft: "100px"}}>
-      <h1>Favourite Meals</h1>
+  <>
+  <h1 style={{ textAlign: 'left', marginBottom: '30px', marginLeft: '200px'}}>My Favourites</h1>
+    <div style={{ width: '80%', marginLeft: '10%' }}>
       <FavouriteList>
         {favourites.map(meal => (
           <FavouriteItem key={meal.idMeal}>
             <MealImage src={meal.strMealThumb} alt={meal.strMeal} />
-            <MealName>{meal.strMeal}</MealName>
+            <MealDetails>
+              <MealName>{meal.strMeal}</MealName>
+            </MealDetails>
             <RemoveButtonContainer>
               <RemoveButton mealId={meal.idMeal} removeFromFavourites={removeFromFavourites} />
             </RemoveButtonContainer>
@@ -55,7 +56,8 @@ const Favourites = ({ favourites, removeFromFavourites }) => (
         ))}
       </FavouriteList>
     </div>
-  </CenteredContainer>
+ 
+  </>
 );
 
 export default Favourites;
