@@ -59,7 +59,7 @@ const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Set a fixed height to ensure the loader is centered */
+  height: 300px;
 `;
 
 const spin = keyframes`

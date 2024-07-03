@@ -11,22 +11,22 @@ const FavouriteItem = styled.li`
   display: flex;
   align-items: center;
   margin: 10px;
-  padding: 20px; /* Increased padding for larger cards */
+  padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 10px; /* Increased border radius for rounded corners */
+  border-radius: 10px;
   background-color: #f8f9fa;
-  width: 80%; /* Adjust width as needed */
+  width: 80%;
 `;
 
 const MealImage = styled.img`
-  width: 150px; /* Adjust size as needed */
-  height: 150px; /* Maintain aspect ratio or adjust as needed */
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
 `;
 
 const MealDetails = styled.div`
   flex: 1;
-  margin-left: 20px; /* Adjust spacing between image and details */
+  margin-left: 20px;
 `;
 
 const MealName = styled.p`
@@ -35,7 +35,7 @@ const MealName = styled.p`
 `;
 
 const RemoveButtonContainer = styled.div`
-  margin-left: auto; /* Pushes the delete button to the right */
+  margin-left: auto;
 `;
 
 const Favourites = ({ favourites, removeFromFavourites }) => (

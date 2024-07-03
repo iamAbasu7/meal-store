@@ -10,7 +10,7 @@ import About from './components/About';
 import styled from 'styled-components';
 
 const Content = styled.div`
-  margin-left: 0; /* No margin left since the sidebar is hidden */
+  margin-left: 0;
   padding: 20px;
   transition: margin-left 0.3s ease;
   ${props => props.isOpen && 'margin-left: 250px;'}

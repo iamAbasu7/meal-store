@@ -12,16 +12,16 @@ const MealList = styled.ul`
 const MealItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure items are spaced evenly */
+  justify-content: space-between;
   margin: 10px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f8f9fa;
-  width: 100%; /* Adjusted width for responsive design */
+  width: 100%;
   
   @media (min-width: 768px) {
-    width: 30%; /* Adjust width for larger screens */
+    width: 30%;
   }
 `;
 
